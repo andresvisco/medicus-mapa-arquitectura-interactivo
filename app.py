@@ -31,7 +31,7 @@ GCP_LIBRARIES_AVAILABLE = False  # Deshabilitado para modo solo-cache
 DEFAULT_PROJECT_ID = "medicus-data-dataml-dev"
 
 # Directorio para archivos de cache JSON
-CACHE_DIR = "gcp_cache"
+CACHE_DIR = "./"
 if not os.path.exists(CACHE_DIR):
     os.makedirs(CACHE_DIR)
 
