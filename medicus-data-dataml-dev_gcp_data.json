@@ -1,0 +1,385 @@
+{
+  "timestamp": "2025-11-01 00:18:03",
+  "project_id": "medicus-data-dataml-dev",
+  "generated_at": "2025-11-01T00:18:03.521503",
+  "version": "1.0",
+  "data": {
+    "nodes": [
+      {
+        "id": "medicus-data-dataml-dev",
+        "label": "medicus-data-dataml-dev",
+        "group": "Project",
+        "size": 30,
+        "color": "#1F77B4",
+        "level": 0,
+        "title": "Proyecto: medicus-data-dataml-dev"
+      },
+      {
+        "id": "gcs_category",
+        "label": "📦 Cloud Storage (GCS)",
+        "group": "Category",
+        "size": 25,
+        "color": "#FF7F0E",
+        "level": 1,
+        "title": "Categoría: Google Cloud Storage<br>Proyecto: medicus-data-dataml-dev<br>Buckets encontrados: 15"
+      },
+      {
+        "id": "gcs_bucket_964905614579_us_central1_import_content_with_faq_csv",
+        "label": "🪣 964905614579_us_central1_import_content_with_faq_csv",
+        "group": "GCS_Bucket",
+        "size": 15,
+        "color": "#FFBB78",
+        "level": 2,
+        "title": "Bucket: 964905614579_us_central1_import_content_with_faq_csv<br>Ubicación: US-CENTRAL1<br>Clase: STANDARD<br>Creado: 2025-10-07 20:39:26.472000+00:00"
+      },
+      {
+        "id": "gcs_bucket_964905614579_us_central1_import_custom",
+        "label": "🪣 964905614579_us_central1_import_custom",
+        "group": "GCS_Bucket",
+        "size": 15,
+        "color": "#FFBB78",
+        "level": 2,
+        "title": "Bucket: 964905614579_us_central1_import_custom<br>Ubicación: US-CENTRAL1<br>Clase: STANDARD<br>Creado: 2025-10-07 23:58:02.109000+00:00"
+      },
+      {
+        "id": "gcs_bucket_cloud-ai-platform-3949d7ca-b3b5-4c99-9edd-d056320117e0",
+        "label": "🪣 cloud-ai-platform-3949d7ca-b3b5-4c99-9edd-d056320117e0",
+        "group": "GCS_Bucket",
+        "size": 15,
+        "color": "#FFBB78",
+        "level": 2,
+        "title": "Bucket: cloud-ai-platform-3949d7ca-b3b5-4c99-9edd-d056320117e0<br>Ubicación: US-CENTRAL1<br>Clase: REGIONAL<br>Creado: 2025-10-03 16:45:02.448000+00:00"
+      },
+      {
+        "id": "gcs_bucket_dataflow-staging-us-central1-964905614579",
+        "label": "🪣 dataflow-staging-us-central1-964905614579",
+        "group": "GCS_Bucket",
+        "size": 15,
+        "color": "#FFBB78",
+        "level": 2,
+        "title": "Bucket: dataflow-staging-us-central1-964905614579<br>Ubicación: US-CENTRAL1<br>Clase: STANDARD<br>Creado: 2025-10-22 16:22:06.602000+00:00"
+      },
+      {
+        "id": "gcs_bucket_gcf-v2-sources-964905614579-us-central1",
+        "label": "🪣 gcf-v2-sources-964905614579-us-central1",
+        "group": "GCS_Bucket",
+        "size": 15,
+        "color": "#FFBB78",
+        "level": 2,
+        "title": "Bucket: gcf-v2-sources-964905614579-us-central1<br>Ubicación: US-CENTRAL1<br>Clase: STANDARD<br>Creado: 2025-10-24 20:33:44.799000+00:00"
+      },
+      {
+        "id": "gcs_bucket_gcf-v2-uploads-964905614579.us-central1.cloudfunctions.appspot.com",
+        "label": "🪣 gcf-v2-uploads-964905614579.us-central1.cloudfunctions.appspot.com",
+        "group": "GCS_Bucket",
+        "size": 15,
+        "color": "#FFBB78",
+        "level": 2,
+        "title": "Bucket: gcf-v2-uploads-964905614579.us-central1.cloudfunctions.appspot.com<br>Ubicación: US-CENTRAL1<br>Clase: STANDARD<br>Creado: 2025-10-24 20:32:43.442000+00:00"
+      },
+      {
+        "id": "gcs_bucket_medicus-bronze-raw-bq-controles-export",
+        "label": "🪣 medicus-bronze-raw-bq-controles-export",
+        "group": "GCS_Bucket",
+        "size": 15,
+        "color": "#FFBB78",
+        "level": 2,
+        "title": "Bucket: medicus-bronze-raw-bq-controles-export<br>Ubicación: US-CENTRAL1<br>Clase: STANDARD<br>Creado: 2025-10-26 22:59:49.068000+00:00"
+      },
+      {
+        "id": "gcs_bucket_medicus-data-bronze-raw-dev-uscentral1",
+        "label": "🪣 medicus-data-bronze-raw-dev-uscentral1",
+        "group": "GCS_Bucket",
+        "size": 15,
+        "color": "#FFBB78",
+        "level": 2,
+        "title": "Bucket: medicus-data-bronze-raw-dev-uscentral1<br>Ubicación: US-CENTRAL1<br>Clase: STANDARD<br>Creado: 2025-10-01 21:25:30.460000+00:00"
+      },
+      {
+        "id": "gcs_bucket_medicus-data-bucket-variospkg",
+        "label": "🪣 medicus-data-bucket-variospkg",
+        "group": "GCS_Bucket",
+        "size": 15,
+        "color": "#FFBB78",
+        "level": 2,
+        "title": "Bucket: medicus-data-bucket-variospkg<br>Ubicación: US-CENTRAL1<br>Clase: STANDARD<br>Creado: 2025-10-16 18:36:05.970000+00:00"
+      },
+      {
+        "id": "gcs_bucket_medicus-data-corpus-reglas-transformacion",
+        "label": "🪣 medicus-data-corpus-reglas-transformacion",
+        "group": "GCS_Bucket",
+        "size": 15,
+        "color": "#FFBB78",
+        "level": 2,
+        "title": "Bucket: medicus-data-corpus-reglas-transformacion<br>Ubicación: US-CENTRAL1<br>Clase: STANDARD<br>Creado: 2025-10-03 09:11:38.150000+00:00"
+      },
+      {
+        "id": "gcs_bucket_medicus-data-doc-para-agentes",
+        "label": "🪣 medicus-data-doc-para-agentes",
+        "group": "GCS_Bucket",
+        "size": 15,
+        "color": "#FFBB78",
+        "level": 2,
+        "title": "Bucket: medicus-data-doc-para-agentes<br>Ubicación: US-CENTRAL1<br>Clase: STANDARD<br>Creado: 2025-10-17 13:47:03.677000+00:00"
+      },
+      {
+        "id": "gcs_bucket_medicus-data-pipelines-dev-uscentral1",
+        "label": "🪣 medicus-data-pipelines-dev-uscentral1",
+        "group": "GCS_Bucket",
+        "size": 15,
+        "color": "#FFBB78",
+        "level": 2,
+        "title": "Bucket: medicus-data-pipelines-dev-uscentral1<br>Ubicación: US-CENTRAL1<br>Clase: STANDARD<br>Creado: 2025-10-08 20:07:21.294000+00:00"
+      },
+      {
+        "id": "gcs_bucket_medicus-medicus-manuales-rag-20251007t202837z-1-001",
+        "label": "🪣 medicus-medicus-manuales-rag-20251007t202837z-1-001",
+        "group": "GCS_Bucket",
+        "size": 15,
+        "color": "#FFBB78",
+        "level": 2,
+        "title": "Bucket: medicus-medicus-manuales-rag-20251007t202837z-1-001<br>Ubicación: US-CENTRAL1<br>Clase: STANDARD<br>Creado: 2025-10-07 20:35:12.684000+00:00"
+      },
+      {
+        "id": "gcs_bucket_medicus-tfstate-relevos",
+        "label": "🪣 medicus-tfstate-relevos",
+        "group": "GCS_Bucket",
+        "size": 15,
+        "color": "#FFBB78",
+        "level": 2,
+        "title": "Bucket: medicus-tfstate-relevos<br>Ubicación: US-CENTRAL1<br>Clase: STANDARD<br>Creado: 2025-10-30 03:16:50.411000+00:00"
+      },
+      {
+        "id": "gcs_bucket_run-sources-medicus-data-dataml-dev-us-central1",
+        "label": "🪣 run-sources-medicus-data-dataml-dev-us-central1",
+        "group": "GCS_Bucket",
+        "size": 15,
+        "color": "#FFBB78",
+        "level": 2,
+        "title": "Bucket: run-sources-medicus-data-dataml-dev-us-central1<br>Ubicación: US-CENTRAL1<br>Clase: STANDARD<br>Creado: 2025-10-24 16:43:40.335000+00:00"
+      },
+      {
+        "id": "bigquery_category",
+        "label": "📊 BigQuery",
+        "group": "Category",
+        "size": 25,
+        "color": "#2CA02C",
+        "level": 1,
+        "title": "Categoría: Google BigQuery<br>Proyecto: medicus-data-dataml-dev<br>Datasets encontrados: 3"
+      },
+      {
+        "id": "bq_dataset_medicus_bronze_raw",
+        "label": "🗂️ medicus_bronze_raw",
+        "group": "BigQuery_Dataset",
+        "size": 15,
+        "color": "#98DF8A",
+        "level": 2,
+        "title": "Dataset: medicus_bronze_raw<br>Ubicación: us-central1<br>Creado: 2025-10-04 21:51:44.242000+00:00<br>Tablas: 22"
+      },
+      {
+        "id": "bq_dataset_medicus_gold_opr_dev",
+        "label": "🗂️ medicus_gold_opr_dev",
+        "group": "BigQuery_Dataset",
+        "size": 15,
+        "color": "#98DF8A",
+        "level": 2,
+        "title": "Dataset: medicus_gold_opr_dev<br>Ubicación: us-central1<br>Creado: 2025-10-08 21:14:03.161000+00:00<br>Tablas: 4"
+      },
+      {
+        "id": "bq_dataset_medicus_silver_cli_dev",
+        "label": "🗂️ medicus_silver_cli_dev",
+        "group": "BigQuery_Dataset",
+        "size": 15,
+        "color": "#98DF8A",
+        "level": 2,
+        "title": "Dataset: medicus_silver_cli_dev<br>Ubicación: us-central1<br>Creado: 2025-10-26 03:42:04.164000+00:00<br>Tablas: 14"
+      },
+      {
+        "id": "dataflow_category",
+        "label": "🌊 Dataflow",
+        "group": "Category",
+        "size": 25,
+        "color": "#9467BD",
+        "level": 1,
+        "title": "Categoría: Google Cloud Dataflow<br>Proyecto: medicus-data-dataml-dev"
+      },
+      {
+        "id": "dataflow_job_2025-10-30_15_44_58-7527355077871864993",
+        "label": "🔄 oracle-to-bq-sa-empresas-grupos-empresas-prd-final",
+        "group": "Dataflow_Job",
+        "size": 15,
+        "color": "#98DF8A",
+        "level": 2,
+        "title": "Job: oracle-to-bq-sa-empresas-grupos-empresas-prd-final<br>ID: 2025-10-30_15_44_58-7527355077871864993<br>Estado: JOB_STATE_DONE<br>Tipo: JOB_TYPE_BATCH<br>Creado: 2025-10-30 22:44:58.830066+00:00"
+      },
+      {
+        "id": "dataflow_job_2025-10-30_15_27_21-5774244641242170597",
+        "label": "🔄 oracle-to-bq-sa-empresas-agrupaciones-empleador-prd-final",
+        "group": "Dataflow_Job",
+        "size": 15,
+        "color": "#98DF8A",
+        "level": 2,
+        "title": "Job: oracle-to-bq-sa-empresas-agrupaciones-empleador-prd-final<br>ID: 2025-10-30_15_27_21-5774244641242170597<br>Estado: JOB_STATE_DONE<br>Tipo: JOB_TYPE_BATCH<br>Creado: 2025-10-30 22:27:22.083704+00:00"
+      },
+      {
+        "id": "dataflow_job_2025-10-30_15_26_01-5386590781653488994",
+        "label": "🔄 oracle-to-bq-sa-empresas-grupo-empresas-prd-final",
+        "group": "Dataflow_Job",
+        "size": 15,
+        "color": "#FF9896",
+        "level": 2,
+        "title": "Job: oracle-to-bq-sa-empresas-grupo-empresas-prd-final<br>ID: 2025-10-30_15_26_01-5386590781653488994<br>Estado: JOB_STATE_FAILED<br>Tipo: JOB_TYPE_BATCH<br>Creado: 2025-10-30 22:26:02.337056+00:00"
+      },
+      {
+        "id": "dataflow_job_2025-10-30_15_24_37-14778280254873052069",
+        "label": "🔄 oracle-to-bq-sa-empresas-sucursales-empresas-prd-final",
+        "group": "Dataflow_Job",
+        "size": 15,
+        "color": "#98DF8A",
+        "level": 2,
+        "title": "Job: oracle-to-bq-sa-empresas-sucursales-empresas-prd-final<br>ID: 2025-10-30_15_24_37-14778280254873052069<br>Estado: JOB_STATE_DONE<br>Tipo: JOB_TYPE_BATCH<br>Creado: 2025-10-30 22:24:38.304353+00:00"
+      },
+      {
+        "id": "dataflow_job_2025-10-30_15_17_31-12224817571291413602",
+        "label": "🔄 oracle-to-bq-sa-agrupaciones-planes-prd-final",
+        "group": "Dataflow_Job",
+        "size": 15,
+        "color": "#98DF8A",
+        "level": 2,
+        "title": "Job: oracle-to-bq-sa-agrupaciones-planes-prd-final<br>ID: 2025-10-30_15_17_31-12224817571291413602<br>Estado: JOB_STATE_DONE<br>Tipo: JOB_TYPE_BATCH<br>Creado: 2025-10-30 22:17:31.772949+00:00"
+      }
+    ],
+    "edges": [
+      {
+        "source": "medicus-data-dataml-dev",
+        "target": "gcs_category",
+        "label": "contiene"
+      },
+      {
+        "source": "gcs_category",
+        "target": "gcs_bucket_964905614579_us_central1_import_content_with_faq_csv",
+        "label": "bucket"
+      },
+      {
+        "source": "gcs_category",
+        "target": "gcs_bucket_964905614579_us_central1_import_custom",
+        "label": "bucket"
+      },
+      {
+        "source": "gcs_category",
+        "target": "gcs_bucket_cloud-ai-platform-3949d7ca-b3b5-4c99-9edd-d056320117e0",
+        "label": "bucket"
+      },
+      {
+        "source": "gcs_category",
+        "target": "gcs_bucket_dataflow-staging-us-central1-964905614579",
+        "label": "bucket"
+      },
+      {
+        "source": "gcs_category",
+        "target": "gcs_bucket_gcf-v2-sources-964905614579-us-central1",
+        "label": "bucket"
+      },
+      {
+        "source": "gcs_category",
+        "target": "gcs_bucket_gcf-v2-uploads-964905614579.us-central1.cloudfunctions.appspot.com",
+        "label": "bucket"
+      },
+      {
+        "source": "gcs_category",
+        "target": "gcs_bucket_medicus-bronze-raw-bq-controles-export",
+        "label": "bucket"
+      },
+      {
+        "source": "gcs_category",
+        "target": "gcs_bucket_medicus-data-bronze-raw-dev-uscentral1",
+        "label": "bucket"
+      },
+      {
+        "source": "gcs_category",
+        "target": "gcs_bucket_medicus-data-bucket-variospkg",
+        "label": "bucket"
+      },
+      {
+        "source": "gcs_category",
+        "target": "gcs_bucket_medicus-data-corpus-reglas-transformacion",
+        "label": "bucket"
+      },
+      {
+        "source": "gcs_category",
+        "target": "gcs_bucket_medicus-data-doc-para-agentes",
+        "label": "bucket"
+      },
+      {
+        "source": "gcs_category",
+        "target": "gcs_bucket_medicus-data-pipelines-dev-uscentral1",
+        "label": "bucket"
+      },
+      {
+        "source": "gcs_category",
+        "target": "gcs_bucket_medicus-medicus-manuales-rag-20251007t202837z-1-001",
+        "label": "bucket"
+      },
+      {
+        "source": "gcs_category",
+        "target": "gcs_bucket_medicus-tfstate-relevos",
+        "label": "bucket"
+      },
+      {
+        "source": "gcs_category",
+        "target": "gcs_bucket_run-sources-medicus-data-dataml-dev-us-central1",
+        "label": "bucket"
+      },
+      {
+        "source": "medicus-data-dataml-dev",
+        "target": "bigquery_category",
+        "label": "contiene"
+      },
+      {
+        "source": "bigquery_category",
+        "target": "bq_dataset_medicus_bronze_raw",
+        "label": "dataset"
+      },
+      {
+        "source": "bigquery_category",
+        "target": "bq_dataset_medicus_gold_opr_dev",
+        "label": "dataset"
+      },
+      {
+        "source": "bigquery_category",
+        "target": "bq_dataset_medicus_silver_cli_dev",
+        "label": "dataset"
+      },
+      {
+        "source": "medicus-data-dataml-dev",
+        "target": "dataflow_category",
+        "label": "contiene"
+      },
+      {
+        "source": "dataflow_category",
+        "target": "dataflow_job_2025-10-30_15_44_58-7527355077871864993",
+        "label": "job"
+      },
+      {
+        "source": "dataflow_category",
+        "target": "dataflow_job_2025-10-30_15_27_21-5774244641242170597",
+        "label": "job"
+      },
+      {
+        "source": "dataflow_category",
+        "target": "dataflow_job_2025-10-30_15_26_01-5386590781653488994",
+        "label": "job"
+      },
+      {
+        "source": "dataflow_category",
+        "target": "dataflow_job_2025-10-30_15_24_37-14778280254873052069",
+        "label": "job"
+      },
+      {
+        "source": "dataflow_category",
+        "target": "dataflow_job_2025-10-30_15_17_31-12224817571291413602",
+        "label": "job"
+      }
+    ]
+  }
+}
