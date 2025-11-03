@@ -489,7 +489,7 @@ project_input = st.text_input(
 
 
 # Contenedor para el JSON y el Diagrama
-col1, col2 = st.columns([1, 2])
+col1, col2 = st.columns([1, 9])
 
 with col1:
     st.subheader("� Cargar Datos")
