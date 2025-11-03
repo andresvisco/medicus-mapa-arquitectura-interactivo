@@ -441,38 +441,38 @@ def create_network_graph(data):
 st.title("☁️ Arquitectura GCP MEDICUS - Viewer Local")
 
 # Sidebar para información
-with st.sidebar:
-    st.header("📋 Información")
+# with st.sidebar:
+#     st.header("📋 Información")
     
-    st.info("""
-    **📁 Modo: Solo Cache Local**
+#     st.info("""
+#     **📁 Modo: Solo Cache Local**
     
-    Esta aplicación usa únicamente archivos JSON 
-    previamente descargados. 
+#     Esta aplicación usa únicamente archivos JSON 
+#     previamente descargados. 
     
-    ✅ No requiere conexión a GCP
-    ✅ No requiere autenticación  
-    ✅ Acceso instantáneo
-    """)
+#     ✅ No requiere conexión a GCP
+#     ✅ No requiere autenticación  
+#     ✅ Acceso instantáneo
+#     """)
     
-    # Mostrar archivos cache disponibles
-    st.subheader("📁 Archivos Disponibles")
-    cache_files = get_available_cache_files()
+#     # Mostrar archivos cache disponibles
+#     st.subheader("📁 Archivos Disponibles")
+#     cache_files = get_available_cache_files()
     
-    if cache_files:
-        for file_info in cache_files:
-            st.write(f"� **{file_info['project_id']}**")
-            st.write(f"📅 {file_info['modified']}")
-            st.write(f"📏 {file_info['size_kb']} KB")
-            st.write("---")
-    else:
-        st.warning("No hay archivos cache disponibles")
-        st.info("""
-        **Para agregar archivos:**
-        1. Ejecuta la versión completa con GCP
-        2. Usa 'Descargar y Guardar' 
-        3. Copia los archivos del directorio `gcp_cache/`
-        """)
+#     if cache_files:
+#         for file_info in cache_files:
+#             st.write(f"� **{file_info['project_id']}**")
+#             st.write(f"📅 {file_info['modified']}")
+#             st.write(f"📏 {file_info['size_kb']} KB")
+#             st.write("---")
+#     else:
+#         st.warning("No hay archivos cache disponibles")
+#         st.info("""
+#         **Para agregar archivos:**
+#         1. Ejecuta la versión completa con GCP
+#         2. Usa 'Descargar y Guardar' 
+#         3. Copia los archivos del directorio `gcp_cache/`
+#         """)
 
 st.markdown("""
 <style>
