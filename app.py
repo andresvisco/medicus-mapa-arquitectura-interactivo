@@ -157,7 +157,7 @@ def create_network_graph(data):
             "barnesHut": {
                 "gravitationalConstant": -1000,
                 "centralGravity": 0.2,
-                "springLength": 300,
+                "springLength": 800,
                 "springConstant": 0.05,
                 "damping": 0.1,
                 "avoidOverlap": 1
