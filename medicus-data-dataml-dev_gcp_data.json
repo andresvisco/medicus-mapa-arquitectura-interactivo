@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-11-01 00:18:03",
+  "timestamp": "2025-11-05 04:31:35",
   "project_id": "medicus-data-dataml-dev",
-  "generated_at": "2025-11-01T00:18:03.521503",
+  "generated_at": "2025-11-05T04:31:35.987350",
   "version": "1.0",
   "data": {
     "nodes": [
@@ -165,7 +165,7 @@
         "size": 25,
         "color": "#2CA02C",
         "level": 1,
-        "title": "Categoría: Google BigQuery<br>Proyecto: medicus-data-dataml-dev<br>Datasets encontrados: 3"
+        "title": "Categoría: Google BigQuery<br>Proyecto: medicus-data-dataml-dev<br>Datasets encontrados: 4"
       },
       {
         "id": "bq_dataset_medicus_bronze_raw",
@@ -174,7 +174,223 @@
         "size": 15,
         "color": "#98DF8A",
         "level": 2,
-        "title": "Dataset: medicus_bronze_raw<br>Ubicación: us-central1<br>Creado: 2025-10-04 21:51:44.242000+00:00<br>Tablas: 22"
+        "title": "Dataset: medicus_bronze_raw<br>Ubicación: us-central1<br>Creado: 2025-10-04 21:51:44.242000+00:00<br>Tablas: 24"
+      },
+      {
+        "id": "bq_table_medicus_bronze_raw_bronze_raw_afi_complemento_foto",
+        "label": "📋 bronze_raw_afi_complemento_foto",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: bronze_raw_afi_complemento_foto<br>Dataset: medicus_bronze_raw<br>Tipo: EXTERNAL<br>Filas: 0<br>Tamaño: 0 GB<br>Creada: 2025-10-16 19:37:11.236000+00:00<br>Modificada: 2025-10-16 19:37:11.264000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_bronze_raw_bronze_raw_afi_foto",
+        "label": "📋 bronze_raw_afi_foto",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: bronze_raw_afi_foto<br>Dataset: medicus_bronze_raw<br>Tipo: TABLE<br>Filas: 188,079,713<br>Tamaño: 70.711 GB<br>Creada: 2025-11-05 03:34:53.033000+00:00<br>Modificada: 2025-11-05 03:34:53.033000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_bronze_raw_bronze_raw_afi_foto_HIST_AVISCO",
+        "label": "📋 bronze_raw_afi_foto_HIST_AVISCO",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: bronze_raw_afi_foto_HIST_AVISCO<br>Dataset: medicus_bronze_raw<br>Tipo: TABLE<br>Filas: 188,079,713<br>Tamaño: 70.711 GB<br>Creada: 2025-11-05 03:24:43.417000+00:00<br>Modificada: 2025-11-05 03:30:36.272000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_bronze_raw_bronze_raw_afi_foto_comp",
+        "label": "📋 bronze_raw_afi_foto_comp",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: bronze_raw_afi_foto_comp<br>Dataset: medicus_bronze_raw<br>Tipo: TABLE<br>Filas: 30,717,822<br>Tamaño: 15.802 GB<br>Creada: 2025-11-05 03:37:41.833000+00:00<br>Modificada: 2025-11-05 03:37:41.834000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_bronze_raw_bronze_raw_afi_foto_old",
+        "label": "📋 bronze_raw_afi_foto_old",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: bronze_raw_afi_foto_old<br>Dataset: medicus_bronze_raw<br>Tipo: TABLE<br>Filas: 188,079,713<br>Tamaño: 21.336 GB<br>Creada: 2025-11-05 03:33:56.683000+00:00<br>Modificada: 2025-11-05 03:33:56.683000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_bronze_raw_bronze_raw_cuadro",
+        "label": "📋 bronze_raw_cuadro",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: bronze_raw_cuadro<br>Dataset: medicus_bronze_raw<br>Tipo: TABLE<br>Filas: 25,830<br>Tamaño: 0.002 GB<br>Creada: 2025-10-04 22:22:59.922000+00:00<br>Modificada: 2025-10-04 22:22:59.923000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_bronze_raw_bronze_raw_disca_afi",
+        "label": "📋 bronze_raw_disca_afi",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: bronze_raw_disca_afi<br>Dataset: medicus_bronze_raw<br>Tipo: TABLE<br>Filas: 597,468<br>Tamaño: 0.075 GB<br>Creada: 2025-10-04 22:22:33.527000+00:00<br>Modificada: 2025-10-04 22:22:33.527000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_bronze_raw_bronze_raw_foto",
+        "label": "📋 bronze_raw_foto",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: bronze_raw_foto<br>Dataset: medicus_bronze_raw<br>Tipo: TABLE<br>Filas: 317<br>Tamaño: 0.0 GB<br>Creada: 2025-10-04 22:21:59.161000+00:00<br>Modificada: 2025-10-04 22:21:59.161000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_bronze_raw_bronze_raw_perfil_socio",
+        "label": "📋 bronze_raw_perfil_socio",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: bronze_raw_perfil_socio<br>Dataset: medicus_bronze_raw<br>Tipo: TABLE<br>Filas: 905,098<br>Tamaño: 0.054 GB<br>Creada: 2025-10-04 22:21:24.154000+00:00<br>Modificada: 2025-10-04 22:21:24.154000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_bronze_raw_bronze_raw_plan_sm",
+        "label": "📋 bronze_raw_plan_sm",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: bronze_raw_plan_sm<br>Dataset: medicus_bronze_raw<br>Tipo: TABLE<br>Filas: 6,696,371<br>Tamaño: 1.331 GB<br>Creada: 2025-10-04 22:20:19.539000+00:00<br>Modificada: 2025-10-04 22:20:19.539000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_bronze_raw_bronze_raw_proceso",
+        "label": "📋 bronze_raw_proceso",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: bronze_raw_proceso<br>Dataset: medicus_bronze_raw<br>Tipo: EXTERNAL<br>Filas: 0<br>Tamaño: 0 GB<br>Creada: 2025-10-06 16:45:10.316000+00:00<br>Modificada: 2025-10-06 16:45:10.643000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_bronze_raw_bronze_raw_ripte_foto",
+        "label": "📋 bronze_raw_ripte_foto",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: bronze_raw_ripte_foto<br>Dataset: medicus_bronze_raw<br>Tipo: TABLE<br>Filas: 80,059<br>Tamaño: 0.006 GB<br>Creada: 2025-10-04 22:19:35.121000+00:00<br>Modificada: 2025-10-04 22:19:35.121000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_bronze_raw_bronze_raw_sa_agrupaciones_planes",
+        "label": "📋 bronze_raw_sa_agrupaciones_planes",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: bronze_raw_sa_agrupaciones_planes<br>Dataset: medicus_bronze_raw<br>Tipo: TABLE<br>Filas: 16<br>Tamaño: 0.0 GB<br>Creada: 2025-10-30 22:15:06.955000+00:00<br>Modificada: 2025-10-30 22:22:12.269000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_bronze_raw_bronze_raw_sa_empresas_agrupaciones_empleador",
+        "label": "📋 bronze_raw_sa_empresas_agrupaciones_empleador",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: bronze_raw_sa_empresas_agrupaciones_empleador<br>Dataset: medicus_bronze_raw<br>Tipo: TABLE<br>Filas: 14<br>Tamaño: 0.0 GB<br>Creada: 2025-10-30 22:26:52.132000+00:00<br>Modificada: 2025-10-30 22:31:53.454000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_bronze_raw_bronze_raw_sa_empresas_empleadores",
+        "label": "📋 bronze_raw_sa_empresas_empleadores",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: bronze_raw_sa_empresas_empleadores<br>Dataset: medicus_bronze_raw<br>Tipo: TABLE<br>Filas: 7,172<br>Tamaño: 0.001 GB<br>Creada: 2025-10-30 22:12:12.781000+00:00<br>Modificada: 2025-10-30 22:18:12.571000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_bronze_raw_bronze_raw_sa_empresas_grupos_empresa",
+        "label": "📋 bronze_raw_sa_empresas_grupos_empresa",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: bronze_raw_sa_empresas_grupos_empresa<br>Dataset: medicus_bronze_raw<br>Tipo: TABLE<br>Filas: 259<br>Tamaño: 0.0 GB<br>Creada: 2025-10-30 22:44:29.048000+00:00<br>Modificada: 2025-10-30 22:49:11.204000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_bronze_raw_bronze_raw_sa_empresas_sucursales_empresa",
+        "label": "📋 bronze_raw_sa_empresas_sucursales_empresa",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: bronze_raw_sa_empresas_sucursales_empresa<br>Dataset: medicus_bronze_raw<br>Tipo: TABLE<br>Filas: 8,553<br>Tamaño: 0.001 GB<br>Creada: 2025-10-30 22:22:52.240000+00:00<br>Modificada: 2025-10-30 22:28:51.943000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_bronze_raw_bronze_raw_sa_modelos_planes_cobertura",
+        "label": "📋 bronze_raw_sa_modelos_planes_cobertura",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: bronze_raw_sa_modelos_planes_cobertura<br>Dataset: medicus_bronze_raw<br>Tipo: TABLE<br>Filas: 36<br>Tamaño: 0.0 GB<br>Creada: 2025-10-30 22:07:23.300000+00:00<br>Modificada: 2025-10-30 22:12:37.948000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_bronze_raw_bronze_raw_sa_planes_cobertura",
+        "label": "📋 bronze_raw_sa_planes_cobertura",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: bronze_raw_sa_planes_cobertura<br>Dataset: medicus_bronze_raw<br>Tipo: TABLE<br>Filas: 14,785<br>Tamaño: 0.001 GB<br>Creada: 2025-10-30 22:04:14.776000+00:00<br>Modificada: 2025-10-30 22:10:22.700000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_bronze_raw_bronze_raw_sa_planes_especiales",
+        "label": "📋 bronze_raw_sa_planes_especiales",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: bronze_raw_sa_planes_especiales<br>Dataset: medicus_bronze_raw<br>Tipo: TABLE<br>Filas: 15<br>Tamaño: 0.0 GB<br>Creada: 2025-10-30 21:51:06.754000+00:00<br>Modificada: 2025-10-30 21:59:51.235000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_bronze_raw_bronze_raw_sa_redes_prestadores",
+        "label": "📋 bronze_raw_sa_redes_prestadores",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: bronze_raw_sa_redes_prestadores<br>Dataset: medicus_bronze_raw<br>Tipo: TABLE<br>Filas: 4<br>Tamaño: 0.0 GB<br>Creada: 2025-10-30 21:57:15.728000+00:00<br>Modificada: 2025-10-30 22:04:09.289000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_bronze_raw_bronze_raw_sa_tipos_baja_afi",
+        "label": "📋 bronze_raw_sa_tipos_baja_afi",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: bronze_raw_sa_tipos_baja_afi<br>Dataset: medicus_bronze_raw<br>Tipo: TABLE<br>Filas: 94<br>Tamaño: 0.0 GB<br>Creada: 2025-11-04 22:53:07.443000+00:00<br>Modificada: 2025-11-04 22:59:07.111000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_bronze_raw_bronze_raw_scoring",
+        "label": "📋 bronze_raw_scoring",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: bronze_raw_scoring<br>Dataset: medicus_bronze_raw<br>Tipo: TABLE<br>Filas: 15,797,702<br>Tamaño: 0.589 GB<br>Creada: 2025-10-04 22:17:51.592000+00:00<br>Modificada: 2025-10-04 22:17:51.592000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_bronze_raw_bronze_raw_socios_judicial",
+        "label": "📋 bronze_raw_socios_judicial",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: bronze_raw_socios_judicial<br>Dataset: medicus_bronze_raw<br>Tipo: TABLE<br>Filas: 154,894<br>Tamaño: 0.109 GB<br>Creada: 2025-10-04 22:17:13.482000+00:00<br>Modificada: 2025-10-04 22:17:13.482000+00:00"
       },
       {
         "id": "bq_dataset_medicus_gold_opr_dev",
@@ -186,6 +402,42 @@
         "title": "Dataset: medicus_gold_opr_dev<br>Ubicación: us-central1<br>Creado: 2025-10-08 21:14:03.161000+00:00<br>Tablas: 4"
       },
       {
+        "id": "bq_table_medicus_gold_opr_dev_mv_gold_poblacion_as",
+        "label": "📋 mv_gold_poblacion_as",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: mv_gold_poblacion_as<br>Dataset: medicus_gold_opr_dev<br>Tipo: MATERIALIZED_VIEW<br>Filas: 63,581,030<br>Tamaño: 13.786 GB<br>Creada: 2025-10-23 05:01:34.557000+00:00<br>Modificada: 2025-10-23 05:01:42.518000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_gold_opr_dev_tbl_snapshot_index",
+        "label": "📋 tbl_snapshot_index",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: tbl_snapshot_index<br>Dataset: medicus_gold_opr_dev<br>Tipo: TABLE<br>Filas: 317<br>Tamaño: 0.0 GB<br>Creada: 2025-10-23 14:03:57.591000+00:00<br>Modificada: 2025-10-23 14:03:57.591000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_gold_opr_dev_vw_latest_snapshot_per_month",
+        "label": "📋 vw_latest_snapshot_per_month",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: vw_latest_snapshot_per_month<br>Dataset: medicus_gold_opr_dev<br>Tipo: VIEW<br>Filas: 0<br>Tamaño: 0 GB<br>Creada: 2025-10-23 05:02:43.294000+00:00<br>Modificada: 2025-10-23 05:02:43.294000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_gold_opr_dev_vw_person_months_from_snapshots",
+        "label": "📋 vw_person_months_from_snapshots",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: vw_person_months_from_snapshots<br>Dataset: medicus_gold_opr_dev<br>Tipo: VIEW<br>Filas: 0<br>Tamaño: 0 GB<br>Creada: 2025-10-23 05:15:34.743000+00:00<br>Modificada: 2025-10-23 05:15:34.743000+00:00"
+      },
+      {
         "id": "bq_dataset_medicus_silver_cli_dev",
         "label": "🗂️ medicus_silver_cli_dev",
         "group": "BigQuery_Dataset",
@@ -195,6 +447,150 @@
         "title": "Dataset: medicus_silver_cli_dev<br>Ubicación: us-central1<br>Creado: 2025-10-26 03:42:04.164000+00:00<br>Tablas: 14"
       },
       {
+        "id": "bq_table_medicus_silver_cli_dev_medicus_silver_movimientos",
+        "label": "📋 medicus_silver_movimientos",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: medicus_silver_movimientos<br>Dataset: medicus_silver_cli_dev<br>Tipo: TABLE<br>Filas: 8<br>Tamaño: 0.0 GB<br>Creada: 2025-10-27 18:32:58.954000+00:00<br>Modificada: 2025-10-31 10:09:08.499000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_silver_cli_dev_medicus_silver_movimientos_detalle",
+        "label": "📋 medicus_silver_movimientos_detalle",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: medicus_silver_movimientos_detalle<br>Dataset: medicus_silver_cli_dev<br>Tipo: TABLE<br>Filas: 39,829<br>Tamaño: 0.004 GB<br>Creada: 2025-10-27 18:33:04.951000+00:00<br>Modificada: 2025-10-31 10:09:14.510000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_silver_cli_dev_medicus_silver_movimientos_detalle_full",
+        "label": "📋 medicus_silver_movimientos_detalle_full",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: medicus_silver_movimientos_detalle_full<br>Dataset: medicus_silver_cli_dev<br>Tipo: TABLE<br>Filas: 48,005<br>Tamaño: 0.005 GB<br>Creada: 2025-10-31 10:22:39.314000+00:00<br>Modificada: 2025-10-31 10:39:39.399000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_silver_cli_dev_medicus_silver_movimientos_full",
+        "label": "📋 medicus_silver_movimientos_full",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: medicus_silver_movimientos_full<br>Dataset: medicus_silver_cli_dev<br>Tipo: TABLE<br>Filas: 10<br>Tamaño: 0.0 GB<br>Creada: 2025-10-31 10:22:24.908000+00:00<br>Modificada: 2025-10-31 10:39:33.497000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_silver_cli_dev_medicus_silver_poblacion_as",
+        "label": "📋 medicus_silver_poblacion_as",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: medicus_silver_poblacion_as<br>Dataset: medicus_silver_cli_dev<br>Tipo: TABLE<br>Filas: 187,557,167<br>Tamaño: 65.904 GB<br>Creada: 2025-11-05 04:08:12.790000+00:00<br>Modificada: 2025-11-05 04:08:12.790000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_silver_cli_dev_medicus_silver_sa_agrupaciones_planes",
+        "label": "📋 medicus_silver_sa_agrupaciones_planes",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: medicus_silver_sa_agrupaciones_planes<br>Dataset: medicus_silver_cli_dev<br>Tipo: TABLE<br>Filas: 16<br>Tamaño: 0.0 GB<br>Creada: 2025-10-29 20:40:11.916000+00:00<br>Modificada: 2025-10-29 20:40:11.916000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_silver_cli_dev_medicus_silver_sa_empleadores",
+        "label": "📋 medicus_silver_sa_empleadores",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: medicus_silver_sa_empleadores<br>Dataset: medicus_silver_cli_dev<br>Tipo: TABLE<br>Filas: 6,914<br>Tamaño: 0.0 GB<br>Creada: 2025-10-29 20:40:34.993000+00:00<br>Modificada: 2025-10-29 20:40:34.993000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_silver_cli_dev_medicus_silver_sa_empresas",
+        "label": "📋 medicus_silver_sa_empresas",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: medicus_silver_sa_empresas<br>Dataset: medicus_silver_cli_dev<br>Tipo: TABLE<br>Filas: 8,553<br>Tamaño: 0.001 GB<br>Creada: 2025-11-04 20:37:46.100000+00:00<br>Modificada: 2025-11-04 20:37:46.100000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_silver_cli_dev_medicus_silver_sa_modelos_planes_cobertura",
+        "label": "📋 medicus_silver_sa_modelos_planes_cobertura",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: medicus_silver_sa_modelos_planes_cobertura<br>Dataset: medicus_silver_cli_dev<br>Tipo: TABLE<br>Filas: 34<br>Tamaño: 0.0 GB<br>Creada: 2025-10-29 20:40:59.338000+00:00<br>Modificada: 2025-10-29 20:40:59.338000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_silver_cli_dev_medicus_silver_sa_planes",
+        "label": "📋 medicus_silver_sa_planes",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: medicus_silver_sa_planes<br>Dataset: medicus_silver_cli_dev<br>Tipo: TABLE<br>Filas: 14,785<br>Tamaño: 0.002 GB<br>Creada: 2025-10-31 04:22:03.051000+00:00<br>Modificada: 2025-10-31 04:22:03.052000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_silver_cli_dev_medicus_silver_sa_planes_cobertura",
+        "label": "📋 medicus_silver_sa_planes_cobertura",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: medicus_silver_sa_planes_cobertura<br>Dataset: medicus_silver_cli_dev<br>Tipo: TABLE<br>Filas: 14,526<br>Tamaño: 0.002 GB<br>Creada: 2025-10-30 12:21:46.580000+00:00<br>Modificada: 2025-10-30 12:21:46.581000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_silver_cli_dev_medicus_silver_sa_planes_especiales",
+        "label": "📋 medicus_silver_sa_planes_especiales",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: medicus_silver_sa_planes_especiales<br>Dataset: medicus_silver_cli_dev<br>Tipo: TABLE<br>Filas: 15<br>Tamaño: 0.0 GB<br>Creada: 2025-10-29 20:41:15.127000+00:00<br>Modificada: 2025-10-29 20:41:15.127000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_silver_cli_dev_medicus_silver_sa_redes_prestadores",
+        "label": "📋 medicus_silver_sa_redes_prestadores",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: medicus_silver_sa_redes_prestadores<br>Dataset: medicus_silver_cli_dev<br>Tipo: TABLE<br>Filas: 4<br>Tamaño: 0.0 GB<br>Creada: 2025-10-29 20:41:29.503000+00:00<br>Modificada: 2025-10-29 20:41:29.503000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_silver_cli_dev_medicus_view_poblacion_as",
+        "label": "📋 medicus_view_poblacion_as",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: medicus_view_poblacion_as<br>Dataset: medicus_silver_cli_dev<br>Tipo: VIEW<br>Filas: 0<br>Tamaño: 0 GB<br>Creada: 2025-10-31 05:29:48.763000+00:00<br>Modificada: 2025-10-31 05:29:48.763000+00:00"
+      },
+      {
+        "id": "bq_dataset_prueba_thinksoft",
+        "label": "🗂️ prueba_thinksoft",
+        "group": "BigQuery_Dataset",
+        "size": 15,
+        "color": "#98DF8A",
+        "level": 2,
+        "title": "Dataset: prueba_thinksoft<br>Ubicación: US<br>Creado: 2025-11-04 18:37:36.885000+00:00<br>Tablas: 1"
+      },
+      {
+        "id": "bq_table_prueba_thinksoft_v_medicus_datos_turnos",
+        "label": "📋 v_medicus_datos_turnos",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: v_medicus_datos_turnos<br>Dataset: prueba_thinksoft<br>Tipo: TABLE<br>Filas: 0<br>Tamaño: 0 GB<br>Creada: 2025-11-04 18:43:58.985000+00:00<br>Modificada: 2025-11-04 18:43:59.053000+00:00"
+      },
+      {
         "id": "dataflow_category",
         "label": "🌊 Dataflow",
         "group": "Category",
@@ -202,6 +598,33 @@
         "color": "#9467BD",
         "level": 1,
         "title": "Categoría: Google Cloud Dataflow<br>Proyecto: medicus-data-dataml-dev"
+      },
+      {
+        "id": "dataflow_job_2025-11-04_14_54_16-9158615585918912511",
+        "label": "🔄 oracle-to-bq-sa-tipos-baja-afi-prd-final",
+        "group": "Dataflow_Job",
+        "size": 15,
+        "color": "#98DF8A",
+        "level": 2,
+        "title": "Job: oracle-to-bq-sa-tipos-baja-afi-prd-final<br>ID: 2025-11-04_14_54_16-9158615585918912511<br>Estado: JOB_STATE_DONE<br>Tipo: JOB_TYPE_BATCH<br>Creado: 2025-11-04 22:54:16.720832+00:00"
+      },
+      {
+        "id": "dataflow_job_2025-11-04_11_12_28-11506580244263218010",
+        "label": "🔄 oracle-to-bq-20251104-190100",
+        "group": "Dataflow_Job",
+        "size": 15,
+        "color": "#FF9896",
+        "level": 2,
+        "title": "Job: oracle-to-bq-20251104-190100<br>ID: 2025-11-04_11_12_28-11506580244263218010<br>Estado: JOB_STATE_FAILED<br>Tipo: JOB_TYPE_BATCH<br>Creado: 2025-11-04 19:12:29.272254+00:00"
+      },
+      {
+        "id": "dataflow_job_2025-11-04_11_01_02-11692789855852124927",
+        "label": "🔄 oracle-to-bq-20251104-190100",
+        "group": "Dataflow_Job",
+        "size": 15,
+        "color": "#FF9896",
+        "level": 2,
+        "title": "Job: oracle-to-bq-20251104-190100<br>ID: 2025-11-04_11_01_02-11692789855852124927<br>Estado: JOB_STATE_FAILED<br>Tipo: JOB_TYPE_BATCH<br>Creado: 2025-11-04 19:01:02.982029+00:00"
       },
       {
         "id": "dataflow_job_2025-10-30_15_44_58-7527355077871864993",
@@ -220,33 +643,6 @@
         "color": "#98DF8A",
         "level": 2,
         "title": "Job: oracle-to-bq-sa-empresas-agrupaciones-empleador-prd-final<br>ID: 2025-10-30_15_27_21-5774244641242170597<br>Estado: JOB_STATE_DONE<br>Tipo: JOB_TYPE_BATCH<br>Creado: 2025-10-30 22:27:22.083704+00:00"
-      },
-      {
-        "id": "dataflow_job_2025-10-30_15_26_01-5386590781653488994",
-        "label": "🔄 oracle-to-bq-sa-empresas-grupo-empresas-prd-final",
-        "group": "Dataflow_Job",
-        "size": 15,
-        "color": "#FF9896",
-        "level": 2,
-        "title": "Job: oracle-to-bq-sa-empresas-grupo-empresas-prd-final<br>ID: 2025-10-30_15_26_01-5386590781653488994<br>Estado: JOB_STATE_FAILED<br>Tipo: JOB_TYPE_BATCH<br>Creado: 2025-10-30 22:26:02.337056+00:00"
-      },
-      {
-        "id": "dataflow_job_2025-10-30_15_24_37-14778280254873052069",
-        "label": "🔄 oracle-to-bq-sa-empresas-sucursales-empresas-prd-final",
-        "group": "Dataflow_Job",
-        "size": 15,
-        "color": "#98DF8A",
-        "level": 2,
-        "title": "Job: oracle-to-bq-sa-empresas-sucursales-empresas-prd-final<br>ID: 2025-10-30_15_24_37-14778280254873052069<br>Estado: JOB_STATE_DONE<br>Tipo: JOB_TYPE_BATCH<br>Creado: 2025-10-30 22:24:38.304353+00:00"
-      },
-      {
-        "id": "dataflow_job_2025-10-30_15_17_31-12224817571291413602",
-        "label": "🔄 oracle-to-bq-sa-agrupaciones-planes-prd-final",
-        "group": "Dataflow_Job",
-        "size": 15,
-        "color": "#98DF8A",
-        "level": 2,
-        "title": "Job: oracle-to-bq-sa-agrupaciones-planes-prd-final<br>ID: 2025-10-30_15_17_31-12224817571291413602<br>Estado: JOB_STATE_DONE<br>Tipo: JOB_TYPE_BATCH<br>Creado: 2025-10-30 22:17:31.772949+00:00"
       }
     ],
     "edges": [
@@ -341,9 +737,177 @@
         "label": "dataset"
       },
       {
+        "source": "bq_dataset_medicus_bronze_raw",
+        "target": "bq_table_medicus_bronze_raw_bronze_raw_afi_complemento_foto",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_bronze_raw",
+        "target": "bq_table_medicus_bronze_raw_bronze_raw_afi_foto",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_bronze_raw",
+        "target": "bq_table_medicus_bronze_raw_bronze_raw_afi_foto_HIST_AVISCO",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_bronze_raw",
+        "target": "bq_table_medicus_bronze_raw_bronze_raw_afi_foto_comp",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_bronze_raw",
+        "target": "bq_table_medicus_bronze_raw_bronze_raw_afi_foto_old",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_bronze_raw",
+        "target": "bq_table_medicus_bronze_raw_bronze_raw_cuadro",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_bronze_raw",
+        "target": "bq_table_medicus_bronze_raw_bronze_raw_disca_afi",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_bronze_raw",
+        "target": "bq_table_medicus_bronze_raw_bronze_raw_foto",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_bronze_raw",
+        "target": "bq_table_medicus_bronze_raw_bronze_raw_perfil_socio",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_bronze_raw",
+        "target": "bq_table_medicus_bronze_raw_bronze_raw_plan_sm",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_bronze_raw",
+        "target": "bq_table_medicus_bronze_raw_bronze_raw_proceso",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_bronze_raw",
+        "target": "bq_table_medicus_bronze_raw_bronze_raw_ripte_foto",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_bronze_raw",
+        "target": "bq_table_medicus_bronze_raw_bronze_raw_sa_agrupaciones_planes",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_bronze_raw",
+        "target": "bq_table_medicus_bronze_raw_bronze_raw_sa_empresas_agrupaciones_empleador",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_bronze_raw",
+        "target": "bq_table_medicus_bronze_raw_bronze_raw_sa_empresas_empleadores",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_bronze_raw",
+        "target": "bq_table_medicus_bronze_raw_bronze_raw_sa_empresas_grupos_empresa",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_bronze_raw",
+        "target": "bq_table_medicus_bronze_raw_bronze_raw_sa_empresas_sucursales_empresa",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_bronze_raw",
+        "target": "bq_table_medicus_bronze_raw_bronze_raw_sa_modelos_planes_cobertura",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_bronze_raw",
+        "target": "bq_table_medicus_bronze_raw_bronze_raw_sa_planes_cobertura",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_bronze_raw",
+        "target": "bq_table_medicus_bronze_raw_bronze_raw_sa_planes_especiales",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_bronze_raw",
+        "target": "bq_table_medicus_bronze_raw_bronze_raw_sa_redes_prestadores",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_bronze_raw",
+        "target": "bq_table_medicus_bronze_raw_bronze_raw_sa_tipos_baja_afi",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_bronze_raw",
+        "target": "bq_table_medicus_bronze_raw_bronze_raw_scoring",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_bronze_raw",
+        "target": "bq_table_medicus_bronze_raw_bronze_raw_socios_judicial",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
         "source": "bigquery_category",
         "target": "bq_dataset_medicus_gold_opr_dev",
         "label": "dataset"
+      },
+      {
+        "source": "bq_dataset_medicus_gold_opr_dev",
+        "target": "bq_table_medicus_gold_opr_dev_mv_gold_poblacion_as",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_gold_opr_dev",
+        "target": "bq_table_medicus_gold_opr_dev_tbl_snapshot_index",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_gold_opr_dev",
+        "target": "bq_table_medicus_gold_opr_dev_vw_latest_snapshot_per_month",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_gold_opr_dev",
+        "target": "bq_table_medicus_gold_opr_dev_vw_person_months_from_snapshots",
+        "label": "table",
+        "color": "#5DADE2"
       },
       {
         "source": "bigquery_category",
@@ -351,9 +915,119 @@
         "label": "dataset"
       },
       {
+        "source": "bq_dataset_medicus_silver_cli_dev",
+        "target": "bq_table_medicus_silver_cli_dev_medicus_silver_movimientos",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_silver_cli_dev",
+        "target": "bq_table_medicus_silver_cli_dev_medicus_silver_movimientos_detalle",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_silver_cli_dev",
+        "target": "bq_table_medicus_silver_cli_dev_medicus_silver_movimientos_detalle_full",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_silver_cli_dev",
+        "target": "bq_table_medicus_silver_cli_dev_medicus_silver_movimientos_full",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_silver_cli_dev",
+        "target": "bq_table_medicus_silver_cli_dev_medicus_silver_poblacion_as",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_silver_cli_dev",
+        "target": "bq_table_medicus_silver_cli_dev_medicus_silver_sa_agrupaciones_planes",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_silver_cli_dev",
+        "target": "bq_table_medicus_silver_cli_dev_medicus_silver_sa_empleadores",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_silver_cli_dev",
+        "target": "bq_table_medicus_silver_cli_dev_medicus_silver_sa_empresas",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_silver_cli_dev",
+        "target": "bq_table_medicus_silver_cli_dev_medicus_silver_sa_modelos_planes_cobertura",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_silver_cli_dev",
+        "target": "bq_table_medicus_silver_cli_dev_medicus_silver_sa_planes",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_silver_cli_dev",
+        "target": "bq_table_medicus_silver_cli_dev_medicus_silver_sa_planes_cobertura",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_silver_cli_dev",
+        "target": "bq_table_medicus_silver_cli_dev_medicus_silver_sa_planes_especiales",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_silver_cli_dev",
+        "target": "bq_table_medicus_silver_cli_dev_medicus_silver_sa_redes_prestadores",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_silver_cli_dev",
+        "target": "bq_table_medicus_silver_cli_dev_medicus_view_poblacion_as",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bigquery_category",
+        "target": "bq_dataset_prueba_thinksoft",
+        "label": "dataset"
+      },
+      {
+        "source": "bq_dataset_prueba_thinksoft",
+        "target": "bq_table_prueba_thinksoft_v_medicus_datos_turnos",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
         "source": "medicus-data-dataml-dev",
         "target": "dataflow_category",
         "label": "contiene"
+      },
+      {
+        "source": "dataflow_category",
+        "target": "dataflow_job_2025-11-04_14_54_16-9158615585918912511",
+        "label": "job"
+      },
+      {
+        "source": "dataflow_category",
+        "target": "dataflow_job_2025-11-04_11_12_28-11506580244263218010",
+        "label": "job"
+      },
+      {
+        "source": "dataflow_category",
+        "target": "dataflow_job_2025-11-04_11_01_02-11692789855852124927",
+        "label": "job"
       },
       {
         "source": "dataflow_category",
@@ -363,21 +1037,6 @@
       {
         "source": "dataflow_category",
         "target": "dataflow_job_2025-10-30_15_27_21-5774244641242170597",
-        "label": "job"
-      },
-      {
-        "source": "dataflow_category",
-        "target": "dataflow_job_2025-10-30_15_26_01-5386590781653488994",
-        "label": "job"
-      },
-      {
-        "source": "dataflow_category",
-        "target": "dataflow_job_2025-10-30_15_24_37-14778280254873052069",
-        "label": "job"
-      },
-      {
-        "source": "dataflow_category",
-        "target": "dataflow_job_2025-10-30_15_17_31-12224817571291413602",
         "label": "job"
       }
     ]
