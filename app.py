@@ -491,44 +491,44 @@ project_input = st.text_input(
 # Contenedor para el JSON y el Diagrama
 col1, col2 = st.columns([1, 9])
 
-with col1:
-    st.subheader("� Cargar Datos")
+# with col1:
+#     st.subheader("� Cargar Datos")
     
-    # Botón simple para cargar desde cache
-    if st.button("📁 Cargar Proyecto", use_container_width=True, type="primary"):
-        graph_data, timestamp = load_data_from_cache(project_input)
+#     # Botón simple para cargar desde cache
+#     if st.button("📁 Cargar Proyecto", use_container_width=True, type="primary"):
+#         graph_data, timestamp = load_data_from_cache(project_input)
         
-        if graph_data:
-            st.session_state['graph_data'] = graph_data
-            st.success(f"✅ Datos cargados exitosamente")
-            st.info(f"📅 **Generados:** {timestamp}")
+#         if graph_data:
+#             st.session_state['graph_data'] = graph_data
+#             st.success(f"✅ Datos cargados exitosamente")
+#             st.info(f"📅 **Generados:** {timestamp}")
             
-            # Mostrar resumen
-            st.subheader("📊 Resumen de Datos")
-            st.write(f"🔹 **Nodos:** {len(graph_data.get('nodes', []))}")
-            st.write(f"🔹 **Conexiones:** {len(graph_data.get('edges', []))}")
+#             # Mostrar resumen
+#             st.subheader("📊 Resumen de Datos")
+#             st.write(f"🔹 **Nodos:** {len(graph_data.get('nodes', []))}")
+#             st.write(f"🔹 **Conexiones:** {len(graph_data.get('edges', []))}")
             
-            # Mostrar JSON expandible
-            with st.expander("🔍 Ver JSON completo", expanded=False):
-                st.json(graph_data)
-        else:
-            st.error(f"❌ No se encontró archivo cache para: `{project_input}`")
-            st.info("""
-            **💡 Soluciones:**
-            • Verifica que el nombre del proyecto sea correcto
-            • Revisa los archivos disponibles en el sidebar
-            • Asegúrate de que el archivo esté en el directorio `gcp_cache/`
-            """)
+#             # Mostrar JSON expandible
+#             with st.expander("🔍 Ver JSON completo", expanded=False):
+#                 st.json(graph_data)
+#         else:
+#             st.error(f"❌ No se encontró archivo cache para: `{project_input}`")
+#             st.info("""
+#             **💡 Soluciones:**
+#             • Verifica que el nombre del proyecto sea correcto
+#             • Revisa los archivos disponibles en el sidebar
+#             • Asegúrate de que el archivo esté en el directorio `gcp_cache/`
+#             """)
     
-    # Estado inicial
-    if 'graph_data' not in st.session_state:
-        st.session_state['graph_data'] = None
-        st.markdown("""
-        **� Para empezar:**
-        1. Selecciona un proyecto de la lista del sidebar
-        2. Haz click en 'Cargar Proyecto'  
-        3. Explora el diagrama interactivo
-        """)
+#     # Estado inicial
+#     if 'graph_data' not in st.session_state:
+#         st.session_state['graph_data'] = None
+#         st.markdown("""
+#         **� Para empezar:**
+#         1. Selecciona un proyecto de la lista del sidebar
+#         2. Haz click en 'Cargar Proyecto'  
+#         3. Explora el diagrama interactivo
+#         """)
 
 with col2:
     st.subheader("🎯 Visualización Interactiva")
