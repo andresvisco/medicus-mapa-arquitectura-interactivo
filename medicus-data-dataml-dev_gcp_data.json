@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-11-05 04:31:35",
+  "timestamp": "2025-11-06 15:01:10",
   "project_id": "medicus-data-dataml-dev",
-  "generated_at": "2025-11-05T04:31:35.987350",
+  "generated_at": "2025-11-06T15:01:10.110274",
   "version": "1.0",
   "data": {
     "nodes": [
@@ -210,7 +210,7 @@
         "size": 10,
         "color": "#AED6F1",
         "level": 3,
-        "title": "Tabla: bronze_raw_afi_foto_comp<br>Dataset: medicus_bronze_raw<br>Tipo: TABLE<br>Filas: 30,717,822<br>Tamaño: 15.802 GB<br>Creada: 2025-11-05 03:37:41.833000+00:00<br>Modificada: 2025-11-05 03:37:41.834000+00:00"
+        "title": "Tabla: bronze_raw_afi_foto_comp<br>Dataset: medicus_bronze_raw<br>Tipo: TABLE<br>Filas: 30,717,822<br>Tamaño: 16.832 GB<br>Creada: 2025-11-05 17:59:49.707000+00:00<br>Modificada: 2025-11-05 17:59:49.707000+00:00"
       },
       {
         "id": "bq_table_medicus_bronze_raw_bronze_raw_afi_foto_old",
@@ -444,7 +444,7 @@
         "size": 15,
         "color": "#98DF8A",
         "level": 2,
-        "title": "Dataset: medicus_silver_cli_dev<br>Ubicación: us-central1<br>Creado: 2025-10-26 03:42:04.164000+00:00<br>Tablas: 14"
+        "title": "Dataset: medicus_silver_cli_dev<br>Ubicación: us-central1<br>Creado: 2025-10-26 03:42:04.164000+00:00<br>Tablas: 15"
       },
       {
         "id": "bq_table_medicus_silver_cli_dev_medicus_silver_movimientos",
@@ -489,7 +489,16 @@
         "size": 10,
         "color": "#AED6F1",
         "level": 3,
-        "title": "Tabla: medicus_silver_poblacion_as<br>Dataset: medicus_silver_cli_dev<br>Tipo: TABLE<br>Filas: 187,557,167<br>Tamaño: 65.904 GB<br>Creada: 2025-11-05 04:08:12.790000+00:00<br>Modificada: 2025-11-05 04:08:12.790000+00:00"
+        "title": "Tabla: medicus_silver_poblacion_as<br>Dataset: medicus_silver_cli_dev<br>Tipo: TABLE<br>Filas: 188,075,675<br>Tamaño: 67.535 GB<br>Creada: 2025-11-05 23:49:42.720000+00:00<br>Modificada: 2025-11-05 23:49:42.721000+00:00"
+      },
+      {
+        "id": "bq_table_medicus_silver_cli_dev_medicus_silver_poblacion_as_TEMP",
+        "label": "📋 medicus_silver_poblacion_as_TEMP",
+        "group": "BigQuery_Table",
+        "size": 10,
+        "color": "#AED6F1",
+        "level": 3,
+        "title": "Tabla: medicus_silver_poblacion_as_TEMP<br>Dataset: medicus_silver_cli_dev<br>Tipo: TABLE<br>Filas: 102,128,687<br>Tamaño: 44.247 GB<br>Creada: 2025-11-06 01:32:07.255000+00:00<br>Modificada: 2025-11-06 01:32:07.255000+00:00"
       },
       {
         "id": "bq_table_medicus_silver_cli_dev_medicus_silver_sa_agrupaciones_planes",
@@ -600,49 +609,49 @@
         "title": "Categoría: Google Cloud Dataflow<br>Proyecto: medicus-data-dataml-dev"
       },
       {
-        "id": "dataflow_job_2025-11-04_14_54_16-9158615585918912511",
-        "label": "🔄 oracle-to-bq-sa-tipos-baja-afi-prd-final",
+        "id": "dataflow_job_2025-11-06_09_57_06-8542158557665349237",
+        "label": "🔄 oracle-to-bq-otamendi-ingesta-t1",
         "group": "Dataflow_Job",
         "size": 15,
-        "color": "#98DF8A",
+        "color": "#87CEEB",
         "level": 2,
-        "title": "Job: oracle-to-bq-sa-tipos-baja-afi-prd-final<br>ID: 2025-11-04_14_54_16-9158615585918912511<br>Estado: JOB_STATE_DONE<br>Tipo: JOB_TYPE_BATCH<br>Creado: 2025-11-04 22:54:16.720832+00:00"
+        "title": "Job: oracle-to-bq-otamendi-ingesta-t1<br>ID: 2025-11-06_09_57_06-8542158557665349237<br>Estado: JOB_STATE_RUNNING<br>Tipo: JOB_TYPE_BATCH<br>Creado: 2025-11-06 17:57:06.519041+00:00"
       },
       {
-        "id": "dataflow_job_2025-11-04_11_12_28-11506580244263218010",
-        "label": "🔄 oracle-to-bq-20251104-190100",
+        "id": "dataflow_job_2025-11-06_09_50_54-8661997800489816267",
+        "label": "🔄 oracle-to-bq-otamendi-ingesta-t1",
         "group": "Dataflow_Job",
         "size": 15,
         "color": "#FF9896",
         "level": 2,
-        "title": "Job: oracle-to-bq-20251104-190100<br>ID: 2025-11-04_11_12_28-11506580244263218010<br>Estado: JOB_STATE_FAILED<br>Tipo: JOB_TYPE_BATCH<br>Creado: 2025-11-04 19:12:29.272254+00:00"
+        "title": "Job: oracle-to-bq-otamendi-ingesta-t1<br>ID: 2025-11-06_09_50_54-8661997800489816267<br>Estado: JOB_STATE_FAILED<br>Tipo: JOB_TYPE_BATCH<br>Creado: 2025-11-06 17:50:55.444835+00:00"
       },
       {
-        "id": "dataflow_job_2025-11-04_11_01_02-11692789855852124927",
-        "label": "🔄 oracle-to-bq-20251104-190100",
+        "id": "dataflow_job_2025-11-06_09_44_23-2359359659021757128",
+        "label": "🔄 oracle-to-bq-otamendi-ingesta-t1",
         "group": "Dataflow_Job",
         "size": 15,
         "color": "#FF9896",
         "level": 2,
-        "title": "Job: oracle-to-bq-20251104-190100<br>ID: 2025-11-04_11_01_02-11692789855852124927<br>Estado: JOB_STATE_FAILED<br>Tipo: JOB_TYPE_BATCH<br>Creado: 2025-11-04 19:01:02.982029+00:00"
+        "title": "Job: oracle-to-bq-otamendi-ingesta-t1<br>ID: 2025-11-06_09_44_23-2359359659021757128<br>Estado: JOB_STATE_FAILED<br>Tipo: JOB_TYPE_BATCH<br>Creado: 2025-11-06 17:44:23.525788+00:00"
       },
       {
-        "id": "dataflow_job_2025-10-30_15_44_58-7527355077871864993",
-        "label": "🔄 oracle-to-bq-sa-empresas-grupos-empresas-prd-final",
+        "id": "dataflow_job_2025-11-06_09_08_15-10333684949898931298",
+        "label": "🔄 oracle-to-bq-otamendi-ingesta-t1",
         "group": "Dataflow_Job",
         "size": 15,
-        "color": "#98DF8A",
+        "color": "#FF9896",
         "level": 2,
-        "title": "Job: oracle-to-bq-sa-empresas-grupos-empresas-prd-final<br>ID: 2025-10-30_15_44_58-7527355077871864993<br>Estado: JOB_STATE_DONE<br>Tipo: JOB_TYPE_BATCH<br>Creado: 2025-10-30 22:44:58.830066+00:00"
+        "title": "Job: oracle-to-bq-otamendi-ingesta-t1<br>ID: 2025-11-06_09_08_15-10333684949898931298<br>Estado: JOB_STATE_FAILED<br>Tipo: JOB_TYPE_BATCH<br>Creado: 2025-11-06 17:08:15.849065+00:00"
       },
       {
-        "id": "dataflow_job_2025-10-30_15_27_21-5774244641242170597",
-        "label": "🔄 oracle-to-bq-sa-empresas-agrupaciones-empleador-prd-final",
+        "id": "dataflow_job_2025-11-05_11_56_47-6239403819298973290",
+        "label": "🔄 oracle-to-bq-otamendi-ingesta-t1",
         "group": "Dataflow_Job",
         "size": 15,
-        "color": "#98DF8A",
+        "color": "#FF9896",
         "level": 2,
-        "title": "Job: oracle-to-bq-sa-empresas-agrupaciones-empleador-prd-final<br>ID: 2025-10-30_15_27_21-5774244641242170597<br>Estado: JOB_STATE_DONE<br>Tipo: JOB_TYPE_BATCH<br>Creado: 2025-10-30 22:27:22.083704+00:00"
+        "title": "Job: oracle-to-bq-otamendi-ingesta-t1<br>ID: 2025-11-05_11_56_47-6239403819298973290<br>Estado: JOB_STATE_FAILED<br>Tipo: JOB_TYPE_BATCH<br>Creado: 2025-11-05 19:56:47.855081+00:00"
       }
     ],
     "edges": [
@@ -946,6 +955,12 @@
       },
       {
         "source": "bq_dataset_medicus_silver_cli_dev",
+        "target": "bq_table_medicus_silver_cli_dev_medicus_silver_poblacion_as_TEMP",
+        "label": "table",
+        "color": "#5DADE2"
+      },
+      {
+        "source": "bq_dataset_medicus_silver_cli_dev",
         "target": "bq_table_medicus_silver_cli_dev_medicus_silver_sa_agrupaciones_planes",
         "label": "table",
         "color": "#5DADE2"
@@ -1016,27 +1031,27 @@
       },
       {
         "source": "dataflow_category",
-        "target": "dataflow_job_2025-11-04_14_54_16-9158615585918912511",
+        "target": "dataflow_job_2025-11-06_09_57_06-8542158557665349237",
         "label": "job"
       },
       {
         "source": "dataflow_category",
-        "target": "dataflow_job_2025-11-04_11_12_28-11506580244263218010",
+        "target": "dataflow_job_2025-11-06_09_50_54-8661997800489816267",
         "label": "job"
       },
       {
         "source": "dataflow_category",
-        "target": "dataflow_job_2025-11-04_11_01_02-11692789855852124927",
+        "target": "dataflow_job_2025-11-06_09_44_23-2359359659021757128",
         "label": "job"
       },
       {
         "source": "dataflow_category",
-        "target": "dataflow_job_2025-10-30_15_44_58-7527355077871864993",
+        "target": "dataflow_job_2025-11-06_09_08_15-10333684949898931298",
         "label": "job"
       },
       {
         "source": "dataflow_category",
-        "target": "dataflow_job_2025-10-30_15_27_21-5774244641242170597",
+        "target": "dataflow_job_2025-11-05_11_56_47-6239403819298973290",
         "label": "job"
       }
     ]
