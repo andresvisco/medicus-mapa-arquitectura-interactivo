@@ -223,20 +223,7 @@ def create_network_graph(data):
     }
     
     # Aplicar las opciones
-    net.on("dragEnd", function (params) {
-    if (params.nodes.length > 0) {
-        // Obtiene el ID del primer nodo arrastrado
-        let nodeId = params.nodes[0];
-        
-        // Actualiza el nodo para fijar su posición
-        let update = [
-            { id: nodeId, fixed: { x: true, y: true } }
-        ];
-        
-        // Llama al método para aplicar el cambio
-        net.body.data.nodes.update(update);
-    }
-});
+    
     net.set_options(json.dumps(options_config))
     
     # Separar nodos por nivel para manejar colapso/expansión
@@ -368,115 +355,130 @@ def create_network_graph(data):
         
         # JavaScript para funcionalidad de expansión/colapso
         custom_js = """
-        <script type="text/javascript">
-        // Estado de expansión de nodos (categorías y datasets)
-        let expandedNodes = new Set();
-        
-        // Función para alternar expansión de nodos
-        function toggleNode(nodeId) {
-            const isExpanded = expandedNodes.has(nodeId);
-            
-            if (isExpanded) {
-                // Colapsar: ocultar nodos hijos y bordes
-                collapseNode(nodeId);
-                expandedNodes.delete(nodeId);
-            } else {
-                // Expandir: mostrar nodos hijos y bordes
-                expandNode(nodeId);
-                expandedNodes.add(nodeId);
-            }
-            
-            // Actualizar la red
-            network.setData({nodes: nodes, edges: edges});
-            network.fit();
-        }
-        
-        function expandNode(nodeId) {
-            // Encontrar y mostrar todos los nodos hijos directos
-            const childNodes = nodes.get().filter(node => {
-                return edges.get().some(edge => 
-                    edge.from === nodeId && edge.to === node.id
-                );
-            });
-            
-            childNodes.forEach(node => {
-                nodes.update({id: node.id, hidden: false});
-            });
-            
-            // Mostrar bordes a nodos hijos directos
-            const childEdges = edges.get().filter(edge => 
-                edge.from === nodeId && childNodes.some(n => n.id === edge.to)
-            );
-            
-            childEdges.forEach(edge => {
-                edges.update({id: edge.id, hidden: false});
-            });
-        }
-        
-        function collapseNode(nodeId) {
-            // Encontrar todos los nodos hijos directos
-            const childNodes = nodes.get().filter(node => {
-                return edges.get().some(edge => 
-                    edge.from === nodeId && edge.to === node.id
-                );
-            });
-            
-            childNodes.forEach(node => {
-                // Ocultar el nodo hijo
-                nodes.update({id: node.id, hidden: true});
-                
-                // Si el hijo también estaba expandido, colapsarlo recursivamente
-                if (expandedNodes.has(node.id)) {
-                    collapseNode(node.id);
-                    expandedNodes.delete(node.id);
-                }
-            });
-            
-            // Ocultar bordes a nodos hijos
-            const childEdges = edges.get().filter(edge => 
-                childNodes.some(n => n.id === edge.to && edge.from === nodeId)
-            );
-            
-            childEdges.forEach(edge => {
-                edges.update({id: edge.id, hidden: true});
-            });
-            
-            // También ocultar bordes desde nodos hijos (para tablas)
-            const descendantEdges = edges.get().filter(edge => 
-                childNodes.some(n => n.id === edge.from)
-            );
-            
-            descendantEdges.forEach(edge => {
-                edges.update({id: edge.id, hidden: true});
-            });
-        }
-        
-        // Agregar evento de click después de que la red esté lista
-        network.on("click", function(params) {
+        <script type="text/javascript">
+        // Estado de expansión de nodos (categorías y datasets)
+        let expandedNodes = new Set();
+        
+        // Función para alternar expansión de nodos
+        function toggleNode(nodeId) {
+            const isExpanded = expandedNodes.has(nodeId);
+            
+            if (isExpanded) {
+                // Colapsar: ocultar nodos hijos y bordes
+                collapseNode(nodeId);
+                expandedNodes.delete(nodeId);
+            } else {
+                // Expandir: mostrar nodos hijos y bordes
+                expandNode(nodeId);
+                expandedNodes.add(nodeId);
+            }
+            
+            // Actualizar la red
+            network.setData({nodes: nodes, edges: edges});
+            network.fit();
+        }
+        
+        function expandNode(nodeId) {
+            // Encontrar y mostrar todos los nodos hijos directos
+            const childNodes = nodes.get().filter(node => {
+                return edges.get().some(edge => 
+                    edge.from === nodeId && edge.to === node.id
+                );
+            });
+            
+            childNodes.forEach(node => {
+                nodes.update({id: node.id, hidden: false});
+            });
+            
+            // Mostrar bordes a nodos hijos directos
+            const childEdges = edges.get().filter(edge => 
+                edge.from === nodeId && childNodes.some(n => n.id === edge.to)
+            );
+            
+            childEdges.forEach(edge => {
+                edges.update({id: edge.id, hidden: false});
+            });
+        }
+        
+        function collapseNode(nodeId) {
+            // Encontrar todos los nodos hijos directos
+            const childNodes = nodes.get().filter(node => {
+                return edges.get().some(edge => 
+                    edge.from === nodeId && edge.to === node.id
+                );
+            });
+            
+            childNodes.forEach(node => {
+                // Ocultar el nodo hijo
+                nodes.update({id: node.id, hidden: true});
+                
+                // Si el hijo también estaba expandido, colapsarlo recursivamente
+                if (expandedNodes.has(node.id)) {
+                    collapseNode(node.id);
+                    expandedNodes.delete(node.id);
+                }
+            });
+            
+            // Ocultar bordes a nodos hijos
+            const childEdges = edges.get().filter(edge => 
+                childNodes.some(n => n.id === edge.to && edge.from === nodeId)
+            );
+            
+            childEdges.forEach(edge => {
+                edges.update({id: edge.id, hidden: true});
+            });
+            
+            // También ocultar bordes desde nodos hijos (para tablas)
+            const descendantEdges = edges.get().filter(edge => 
+                childNodes.some(n => n.id === edge.from)
+            );
+            
+            descendantEdges.forEach(edge => {
+                edges.update({id: edge.id, hidden: true});
+            });
+        }
+        
+        // ==========================================================
+        // NUEVA FUNCIÓN AÑADIDA: Fijar el nodo al finalizar el arrastre
+        // ==========================================================
+        network.on("dragEnd", function(params) {
             if (params.nodes.length > 0) {
                 const nodeId = params.nodes[0];
-                const node = nodes.get(nodeId);
-                
-                // Permitir expansión en nodos de categoría (level 1) y dataset (level 2)
-                if (node && (node.level === 1 || node.level === 2)) {
-                    toggleNode(nodeId);
-                }
+                nodes.update({
+                    id: nodeId,
+                    // Fija la posición en X e Y
+                    fixed: { x: true, y: true } 
+                });
             }
         });
-        
-        // Agregar indicadores visuales para nodos expandibles
-        network.on("hoverNode", function(params) {
-            const node = nodes.get(params.node);
-            if (node && (node.level === 1 || node.level === 2)) {
-                document.body.style.cursor = 'pointer';
-            }
-        });
-        
-        network.on("blurNode", function(params) {
-            document.body.style.cursor = 'default';
-        });
-        </script>
-        """
+        // ==========================================================
+
+        // Agregar evento de click después de que la red esté lista
+        network.on("click", function(params) {
+            if (params.nodes.length > 0) {
+                const nodeId = params.nodes[0];
+                const node = nodes.get(nodeId);
+                
+                // Permitir expansión en nodos de categoría (level 1) y dataset (level 2)
+                if (node && (node.level === 1 || node.level === 2)) {
+                    toggleNode(nodeId);
+                }
+            }
+        });
+        
+        // Agregar indicadores visuales para nodos expandibles
+        network.on("hoverNode", function(params) {
+            const node = nodes.get(params.node);
+            if (node && (node.level === 1 || node.level === 2)) {
+                document.body.style.cursor = 'pointer';
+            }
+        });
+        
+        network.on("blurNode", function(params) {
+            document.body.style.cursor = 'default';
+        });
+        </script>
+        """
         
         # Insertar el JavaScript antes del cierre del body
         html_content = html_content.replace('</body>', custom_js + '</body>')
