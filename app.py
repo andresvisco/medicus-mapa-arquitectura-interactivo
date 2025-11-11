@@ -194,7 +194,7 @@ def create_network_graph(data):
             "borderWidth": 2,
             "borderWidthSelected": 4,
             "font": {
-                "size": 10,
+                "size": 5,
                 "color": "#333333"
             },
             "shadow": {
