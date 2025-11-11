@@ -194,20 +194,20 @@ def create_network_graph(data):
             "borderWidth": 2,
             "borderWidthSelected": 4,
             "font": {
-                "size": 14,
+                "size": 10,
                 "color": "#333333"
             },
             "shadow": {
                 "enabled": True,
                 "color": "rgba(0,0,0,0.2)",
-                "size": 10,
+                "size": 5,
                 "x": 2,
                 "y": 2
             }
         },
         "layout": {
             "hierarchical": {
-                "enabled": False,
+                "enabled": True,
                 "levelSeparation": 150,
                 "nodeSpacing": 100,
                 "treeSpacing": 200,
