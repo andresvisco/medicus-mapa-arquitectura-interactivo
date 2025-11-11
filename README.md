@@ -71,7 +71,9 @@ Esta versión está optimizada para Streamlit Cloud:
 
 ## 🎨 Funcionalidades del diagrama
 
-- **Click en categorías**: Expandir/colapsar recursos
+- **Click en categorías**: Expandir/colapsar recursos (nivel 1: categorías como BigQuery)
+- **Click en datasets**: Expandir/colapsar tablas (nivel 2: datasets de BigQuery)
+- **Navegación jerárquica**: 4 niveles - Proyecto → Categorías → Datasets/Buckets → Tablas
 - **Arrastrar nodos**: Reorganizar el layout
 - **Zoom**: Rueda del mouse para acercar/alejar
 - **Colores**: Verde=activo, Rojo=error, Azul=corriendo

@@ -228,7 +228,8 @@ def create_network_graph(data):
     # Separar nodos por nivel para manejar colapso/expansión
     project_nodes = [n for n in data['nodes'] if n.get('level') == 0]  # Proyecto raíz
     category_nodes = [n for n in data['nodes'] if n.get('level') == 1]  # Categorías
-    detail_nodes = [n for n in data['nodes'] if n.get('level') == 2]   # Detalles (inicialmente ocultos)
+    detail_nodes = [n for n in data['nodes'] if n.get('level') == 2]   # Detalles (datasets, buckets)
+    table_nodes = [n for n in data['nodes'] if n.get('level') == 3]    # Tablas (inicialmente ocultos)
     
     # Añadir nodo del proyecto
     for node in project_nodes:
@@ -267,12 +268,23 @@ def create_network_graph(data):
             hidden=False  # Categorías visibles inicialmente
         )
     
-    # Añadir nodos de detalle (inicialmente ocultos)
+    # Añadir nodos de detalle (datasets/buckets) con indicador de expansión
     for node in detail_nodes:
+        # Contar cuántos nodos hijos (tablas) tiene este dataset
+        children_count = len([n for n in table_nodes if any(
+            e['source'] == node['id'] and e['target'] == n['id'] 
+            for e in data['edges']
+        )])
+        
+        # Añadir indicador visual de expansión si hay tablas
+        expanded_label = f"{node['label']} [{children_count}]" if children_count > 0 else node['label']
         title_text = node.get('title', f"Recurso: {node.get('group', 'N/A')}<br>ID: {node['id']}")
+        if children_count > 0:
+            title_text += f"<br><br>🔍 Click para expandir ({children_count} tablas)"
+        
         net.add_node(
             n_id=node['id'], 
-            label=node['label'], 
+            label=expanded_label, 
             title=title_text,
             size=node['size'],
             color=node['color'],
@@ -281,9 +293,23 @@ def create_network_graph(data):
             hidden=True  # Detalles ocultos inicialmente
         )
     
+    # Añadir nodos de tabla (level 3, inicialmente ocultos)
+    for node in table_nodes:
+        title_text = node.get('title', f"Tabla: {node.get('group', 'N/A')}<br>ID: {node['id']}")
+        net.add_node(
+            n_id=node['id'], 
+            label=node['label'], 
+            title=title_text,
+            size=node['size'],
+            color=node['color'],
+            physics=True,
+            level=3,
+            hidden=True  # Tablas ocultas inicialmente
+        )
+    
     # Crear un conjunto de IDs de nodos existentes para validación
     existing_node_ids = set()
-    for node_list in [project_nodes, category_nodes, detail_nodes]:
+    for node_list in [project_nodes, category_nodes, detail_nodes, table_nodes]:
         for node in node_list:
             existing_node_ids.add(node['id'])
     
@@ -301,8 +327,8 @@ def create_network_graph(data):
         source_level = next((n.get('level', 0) for n in data['nodes'] if n['id'] == source_id), 0)
         target_level = next((n.get('level', 0) for n in data['nodes'] if n['id'] == target_id), 0)
         
-        # Ocultar bordes que van a nodos de nivel 2 (detalles)
-        edge_hidden = target_level == 2
+        # Ocultar bordes que van a nodos de nivel 2 o 3 (detalles y tablas)
+        edge_hidden = target_level in [2, 3]
         
         try:
             net.add_edge(
@@ -329,21 +355,21 @@ def create_network_graph(data):
         # JavaScript para funcionalidad de expansión/colapso
         custom_js = """
         <script type="text/javascript">
-        // Estado de expansión de categorías
-        let expandedCategories = new Set();
+        // Estado de expansión de nodos (categorías y datasets)
+        let expandedNodes = new Set();
         
-        // Función para alternar expansión de categorías
-        function toggleCategory(categoryId) {
-            const isExpanded = expandedCategories.has(categoryId);
+        // Función para alternar expansión de nodos
+        function toggleNode(nodeId) {
+            const isExpanded = expandedNodes.has(nodeId);
             
             if (isExpanded) {
                 // Colapsar: ocultar nodos hijos y bordes
-                collapseCategory(categoryId);
-                expandedCategories.delete(categoryId);
+                collapseNode(nodeId);
+                expandedNodes.delete(nodeId);
             } else {
                 // Expandir: mostrar nodos hijos y bordes
-                expandCategory(categoryId);
-                expandedCategories.add(categoryId);
+                expandNode(nodeId);
+                expandedNodes.add(nodeId);
             }
             
             // Actualizar la red
@@ -351,11 +377,11 @@ def create_network_graph(data):
             network.fit();
         }
         
-        function expandCategory(categoryId) {
-            // Encontrar y mostrar todos los nodos hijos
+        function expandNode(nodeId) {
+            // Encontrar y mostrar todos los nodos hijos directos
             const childNodes = nodes.get().filter(node => {
                 return edges.get().some(edge => 
-                    edge.from === categoryId && edge.to === node.id
+                    edge.from === nodeId && edge.to === node.id
                 );
             });
             
@@ -363,35 +389,50 @@ def create_network_graph(data):
                 nodes.update({id: node.id, hidden: false});
             });
             
-            // Mostrar bordes relacionados
-            const relatedEdges = edges.get().filter(edge => 
-                edge.from === categoryId || 
-                (childNodes.some(n => n.id === edge.from) || childNodes.some(n => n.id === edge.to))
+            // Mostrar bordes a nodos hijos directos
+            const childEdges = edges.get().filter(edge => 
+                edge.from === nodeId && childNodes.some(n => n.id === edge.to)
             );
             
-            relatedEdges.forEach(edge => {
+            childEdges.forEach(edge => {
                 edges.update({id: edge.id, hidden: false});
             });
         }
         
-        function collapseCategory(categoryId) {
-            // Encontrar y ocultar todos los nodos hijos
+        function collapseNode(nodeId) {
+            // Encontrar todos los nodos hijos directos
             const childNodes = nodes.get().filter(node => {
                 return edges.get().some(edge => 
-                    edge.from === categoryId && edge.to === node.id
+                    edge.from === nodeId && edge.to === node.id
                 );
             });
             
             childNodes.forEach(node => {
+                // Ocultar el nodo hijo
                 nodes.update({id: node.id, hidden: true});
+                
+                // Si el hijo también estaba expandido, colapsarlo recursivamente
+                if (expandedNodes.has(node.id)) {
+                    collapseNode(node.id);
+                    expandedNodes.delete(node.id);
+                }
             });
             
             // Ocultar bordes a nodos hijos
             const childEdges = edges.get().filter(edge => 
-                childNodes.some(n => n.id === edge.to && edge.from === categoryId)
+                childNodes.some(n => n.id === edge.to && edge.from === nodeId)
             );
             
             childEdges.forEach(edge => {
+                edges.update({id: edge.id, hidden: true});
+            });
+            
+            // También ocultar bordes desde nodos hijos (para tablas)
+            const descendantEdges = edges.get().filter(edge => 
+                childNodes.some(n => n.id === edge.from)
+            );
+            
+            descendantEdges.forEach(edge => {
                 edges.update({id: edge.id, hidden: true});
             });
         }
@@ -402,9 +443,9 @@ def create_network_graph(data):
                 const nodeId = params.nodes[0];
                 const node = nodes.get(nodeId);
                 
-                // Solo permitir expansión en nodos de categoría (level 1)
-                if (node && node.level === 1) {
-                    toggleCategory(nodeId);
+                // Permitir expansión en nodos de categoría (level 1) y dataset (level 2)
+                if (node && (node.level === 1 || node.level === 2)) {
+                    toggleNode(nodeId);
                 }
             }
         });
@@ -412,7 +453,7 @@ def create_network_graph(data):
         // Agregar indicadores visuales para nodos expandibles
         network.on("hoverNode", function(params) {
             const node = nodes.get(params.node);
-            if (node && node.level === 1) {
+            if (node && (node.level === 1 || node.level === 2)) {
                 document.body.style.cursor = 'pointer';
             }
         });
