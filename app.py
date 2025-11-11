@@ -155,11 +155,11 @@ def create_network_graph(data):
     options_config = {
         "physics": {
             "barnesHut": {
-                "gravitationalConstant": -1,
+                "gravitationalConstant": -2000,
                 "centralGravity": 0.2,
                 "springLength": 200,
-                "springConstant": 0.15,
-                "damping": 0.01,
+                "springConstant": 0.05,
+                "damping": 0.9,
                 "avoidOverlap": 1
             },
             "minVelocity": 0.75,
