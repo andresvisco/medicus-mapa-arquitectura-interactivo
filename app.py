@@ -223,6 +223,20 @@ def create_network_graph(data):
     }
     
     # Aplicar las opciones
+    net.on("dragEnd", function (params) {
+    if (params.nodes.length > 0) {
+        // Obtiene el ID del primer nodo arrastrado
+        let nodeId = params.nodes[0];
+        
+        // Actualiza el nodo para fijar su posición
+        let update = [
+            { id: nodeId, fixed: { x: true, y: true } }
+        ];
+        
+        // Llama al método para aplicar el cambio
+        net.body.data.nodes.update(update);
+    }
+});
     net.set_options(json.dumps(options_config))
     
     # Separar nodos por nivel para manejar colapso/expansión
